@@ -1,0 +1,24 @@
+# Direktori yang tidak perlu di-push
+/vendor
+/node_modules
+/storage
+/bootstrap/cache
+
+# File konfigurasi dan kredensial
+.env
+.env.example
+
+# File cache dan log
+*.log
+*.cache
+*.bak
+
+# File database lokal
+database/database.sqlite
+database/database.sqlite-journal
+
+# Konfigurasi editor dan OS
+.idea/
+.vscode/
+.DS_Store
+Thumbs.db
