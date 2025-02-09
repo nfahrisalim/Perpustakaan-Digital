@@ -4,14 +4,14 @@
 Perpustakaan Digital adalah sebuah aplikasi berbasis web yang memungkinkan pengguna untuk mengelola buku digital, membaca, memberikan ulasan, serta mendukung fitur sumbangan buku digital. Proyek ini dibangun menggunakan framework Laravel 11 dengan fitur autentikasi dan berbagai role pengguna seperti Admin dan Mahasiswa.
 
 ## Fitur Utama
-- **Manajemen Kategori:** CRUD kategori buku.
-- **Manajemen Buku:** CRUD buku digital, membaca buku, serta verifikasi buku.
-- **Sistem Ulasan:** Pengguna dapat memberikan ulasan pada buku.
-- **Pencarian Buku:** Fitur pencarian dengan autocomplete.
-- **Manajemen Anggota:** CRUD data anggota dengan fitur ubah profil dan password.
-- **Sistem Chat:** Fitur komunikasi antar pengguna.
-- **Sistem Sumbangan:** Pengguna dapat menyumbangkan buku digital.
-- **Autentikasi dan Role:** Admin memiliki akses penuh, sedangkan mahasiswa hanya dapat melihat data buku.
+- **Manajemen Kategori** 
+- **Manajemen Buku** 
+- **Sistem Ulasan** 
+- **Pencarian Buku** 
+- **Manajemen Anggota** 
+- **Sistem Chat** 
+- **Sistem Sumbangan** 
+- **Autentikasi dan Role** 
 
 ## Teknologi yang Digunakan
 - **Backend:** Laravel 11
@@ -77,23 +77,6 @@ Perpustakaan Digital adalah sebuah aplikasi berbasis web yang memungkinkan pengg
 - **UsersTableSeeder:** Mengisi data pengguna.
 - **CategoryTableSeeder:** Mengisi data kategori buku.
 - **BookTableSeeder:** Mengisi data buku digital.
-
-## Masalah yang Sempat Ditemui
-1. **Foreign Key Constraint:** Error saat melakukan seeding buku karena foreign key `user_id`.
-   - Solusi: Pastikan tabel `users` memiliki data yang sesuai sebelum seeding buku.
-2. **Target Class Not Found:** Error pada Laravel karena penggunaan controller tanpa FQCN.
-   - Solusi: Menggunakan namespace lengkap pada file `web.php`, seperti:
-     ```php
-     use App\Http\Controllers\DashboardController;
-     ```
-3. **Cache Route:** Masalah rute tidak terdeteksi setelah perubahan.
-   - Solusi: Membersihkan cache dengan:
-     ```bash
-     php artisan route:clear
-     php artisan config:clear
-     php artisan cache:clear
-     composer dump-autoload
-     ```
 
 ## Penggunaan
 ### Login
