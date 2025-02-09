@@ -108,9 +108,5 @@ Pengguna dapat mencari buku dengan fitur autocomplete di kolom pencarian.
 ### Sumbangan Buku
 Pengguna dapat menyumbangkan buku digital melalui fitur sumbangan.
 
-## Kontribusi
-Jika Anda ingin berkontribusi pada proyek ini, harap lakukan fork dan ajukan pull request dengan perubahan yang jelas.
 
-## Lisensi
-Proyek ini menggunakan lisensi MIT.
 
