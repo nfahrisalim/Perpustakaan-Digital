@@ -6,6 +6,7 @@
 
 # File konfigurasi dan kredensial
 .env
+.env.example
 
 # File cache dan log
 *.log
@@ -21,4 +22,3 @@ database/database.sqlite-journal
 .vscode/
 .DS_Store
 Thumbs.db
-.vercel

@@ -1,66 +1,95 @@
-<p align="center"><a href="https://laravel.com" target="_blank"><img src="https://raw.githubusercontent.com/laravel/art/master/logo-lockup/5%20SVG/2%20CMYK/1%20Full%20Color/laravel-logolockup-cmyk-red.svg" width="400" alt="Laravel Logo"></a></p>
+# README Proyek Perpustakaan Digital
 
-<p align="center">
-<a href="https://github.com/laravel/framework/actions"><img src="https://github.com/laravel/framework/workflows/tests/badge.svg" alt="Build Status"></a>
-<a href="https://packagist.org/packages/laravel/framework"><img src="https://img.shields.io/packagist/dt/laravel/framework" alt="Total Downloads"></a>
-<a href="https://packagist.org/packages/laravel/framework"><img src="https://img.shields.io/packagist/v/laravel/framework" alt="Latest Stable Version"></a>
-<a href="https://packagist.org/packages/laravel/framework"><img src="https://img.shields.io/packagist/l/laravel/framework" alt="License"></a>
-</p>
+## Deskripsi Proyek
+Perpustakaan Digital adalah sebuah aplikasi berbasis web yang memungkinkan pengguna untuk mengelola buku digital, membaca, memberikan ulasan, serta mendukung fitur sumbangan buku digital. Proyek ini dibangun menggunakan framework Laravel 11 dengan fitur autentikasi dan berbagai role pengguna seperti Admin dan Mahasiswa.
 
-## About Laravel
+## Fitur Utama
+- **Manajemen Kategori** 
+- **Manajemen Buku** 
+- **Sistem Ulasan** 
+- **Pencarian Buku** 
+- **Manajemen Anggota** 
+- **Sistem Chat** 
+- **Sistem Sumbangan** 
+- **Autentikasi dan Role** 
 
-Laravel is a web application framework with expressive, elegant syntax. We believe development must be an enjoyable and creative experience to be truly fulfilling. Laravel takes the pain out of development by easing common tasks used in many web projects, such as:
+## Teknologi yang Digunakan
+- **Backend:** Laravel 11
+- **Frontend:** Blade Template
+- **Database:** MySQL
+- **Autentikasi:** Laravel Breeze
 
-- [Simple, fast routing engine](https://laravel.com/docs/routing).
-- [Powerful dependency injection container](https://laravel.com/docs/container).
-- Multiple back-ends for [session](https://laravel.com/docs/session) and [cache](https://laravel.com/docs/cache) storage.
-- Expressive, intuitive [database ORM](https://laravel.com/docs/eloquent).
-- Database agnostic [schema migrations](https://laravel.com/docs/migrations).
-- [Robust background job processing](https://laravel.com/docs/queues).
-- [Real-time event broadcasting](https://laravel.com/docs/broadcasting).
+## Struktur Folder
+```
+├── app
+│   ├── Http
+│   │   └── Controllers
+├── database
+│   └── seeders
+├── routes
+│   └── web.php
+└── resources
+    └── views
+```
 
-Laravel is accessible, powerful, and provides tools required for large, robust applications.
+## Instalasi
+1. Clone repositori ini:
+   ```bash
+   git clone <url-repo>
+   ```
+2. Masuk ke direktori proyek:
+   ```bash
+   cd Library
+   ```
+3. Install dependencies:
+   ```bash
+   composer install
+   npm install
+   npm run dev
+   ```
+4. Salin file `.env.example` menjadi `.env` dan konfigurasi sesuai kebutuhan.
+5. Generate application key:
+   ```bash
+   php artisan key:generate
+   ```
+6. Migrasi dan seeding database:
+   ```bash
+   php artisan migrate --seed
+   ```
+7. Jalankan server lokal:
+   ```bash
+   php artisan serve
+   ```
 
-## Learning Laravel
+## Rute Utama
+| Rute                  | Method | Deskripsi                     |
+|-----------------------|--------|-------------------------------|
+| `/dashboard`          | GET    | Dashboard utama              |
+| `/kategory`           | GET    | Menampilkan kategori         |
+| `/book`               | GET    | Daftar buku                  |
+| `/book/add`           | GET    | Form tambah buku             |
+| `/anggota`            | GET    | Daftar anggota               |
+| `/sumbang`            | GET    | Form sumbangan buku          |
+| `/search`             | GET    | Pencarian buku               |
 
-Laravel has the most extensive and thorough [documentation](https://laravel.com/docs) and video tutorial library of all modern web application frameworks, making it a breeze to get started with the framework.
+## Seeder yang Digunakan
+- **RolesTableSeeder:** Mengisi data role.
+- **UsersTableSeeder:** Mengisi data pengguna.
+- **CategoryTableSeeder:** Mengisi data kategori buku.
+- **BookTableSeeder:** Mengisi data buku digital.
 
-You may also try the [Laravel Bootcamp](https://bootcamp.laravel.com), where you will be guided through building a modern Laravel application from scratch.
+## Penggunaan
+### Login
+Akses aplikasi melalui halaman login dengan menggunakan akun yang telah disediakan atau dibuat melalui Seeder.
 
-If you don't feel like reading, [Laracasts](https://laracasts.com) can help. Laracasts contains thousands of video tutorials on a range of topics including Laravel, modern PHP, unit testing, and JavaScript. Boost your skills by digging into our comprehensive video library.
+### Manajemen Buku
+Admin dapat menambahkan, mengedit, memverifikasi, dan menghapus buku. Mahasiswa hanya dapat melihat dan membaca buku yang tersedia.
 
-## Laravel Sponsors
+### Pencarian Buku
+Pengguna dapat mencari buku dengan fitur autocomplete di kolom pencarian.
 
-We would like to extend our thanks to the following sponsors for funding Laravel development. If you are interested in becoming a sponsor, please visit the [Laravel Partners program](https://partners.laravel.com).
+### Sumbangan Buku
+Pengguna dapat menyumbangkan buku digital melalui fitur sumbangan.
 
-### Premium Partners
 
-- **[Vehikl](https://vehikl.com/)**
-- **[Tighten Co.](https://tighten.co)**
-- **[WebReinvent](https://webreinvent.com/)**
-- **[Kirschbaum Development Group](https://kirschbaumdevelopment.com)**
-- **[64 Robots](https://64robots.com)**
-- **[Curotec](https://www.curotec.com/services/technologies/laravel/)**
-- **[Cyber-Duck](https://cyber-duck.co.uk)**
-- **[DevSquad](https://devsquad.com/hire-laravel-developers)**
-- **[Jump24](https://jump24.co.uk)**
-- **[Redberry](https://redberry.international/laravel/)**
-- **[Active Logic](https://activelogic.com)**
-- **[byte5](https://byte5.de)**
-- **[OP.GG](https://op.gg)**
 
-## Contributing
-
-Thank you for considering contributing to the Laravel framework! The contribution guide can be found in the [Laravel documentation](https://laravel.com/docs/contributions).
-
-## Code of Conduct
-
-In order to ensure that the Laravel community is welcoming to all, please review and abide by the [Code of Conduct](https://laravel.com/docs/contributions#code-of-conduct).
-
-## Security Vulnerabilities
-
-If you discover a security vulnerability within Laravel, please send an e-mail to Taylor Otwell via [taylor@laravel.com](mailto:taylor@laravel.com). All security vulnerabilities will be promptly addressed.
-
-## License
-
-The Laravel framework is open-sourced software licensed under the [MIT license](https://opensource.org/licenses/MIT).
